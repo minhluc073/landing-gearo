@@ -3498,9 +3498,7 @@ header {
     }
 
     @include res(lg) {
-        .icon {
-            max-width: 35px;
-        }
+
     }
 }
 .help-box-icon {
@@ -3526,7 +3524,14 @@ header {
         font-weight: 600;
         margin-top: 8px;
         position: relative;
-        background: linear-gradient(90deg, #fdb79e 0%, #fdd1b1 25%, #feeacd 50%, #fdd1b1 75%, #fdb79e 100%);
+        background: linear-gradient(
+            90deg,
+            #fdb79e 0%,
+            #fdd1b1 25%,
+            #feeacd 50%,
+            #fdd1b1 75%,
+            #fdb79e 100%
+        );
         background-size: 200% 100%;
         background-position: 200% 0;
         animation: bgMove 3s linear infinite;
@@ -3534,5 +3539,192 @@ header {
         -webkit-text-fill-color: transparent;
         background-clip: text;
         color: transparent;
+    }
+}
+
+.section-elementore {
+    padding-top: 107px;
+
+    .elementor-icon {
+        margin-bottom: 32px;
+    }
+
+    .heading-section {
+        margin-bottom: 48px;
+    }
+
+    .row {
+        row-gap: 40px;
+    }
+
+    .title {
+        margin-bottom: 12px;
+    }
+
+    .tf-grid-layout {
+        margin-bottom: 48px;
+        gap: 30px;
+    }
+
+    @include res(md) {
+        padding-top: 80px;
+
+        .elementor-icon {
+            margin-bottom: 16px;
+        }
+
+        .heading-section {
+            margin-bottom: 32px;
+        }
+
+        .tf-grid-layout {
+            margin-bottom: 32px;
+            gap: 24px 15px;
+        }
+    }
+}
+
+.addition-item {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 11px;
+    border-radius: 99px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section-packed {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+
+    .heading-section {
+        margin-bottom: 42px;
+    }
+
+    > .img-1 {
+        width: 1297px;
+        height: 575px;
+        opacity: 0.15;
+        transform: rotate(-157.24deg);
+        background: linear-gradient(89.64deg, #c81b88 4.49%, #26e6e6 84.9%);
+        filter: blur(250px);
+    }
+
+    .s-item_blum {
+        position: absolute;
+        top: -43%;
+        right: 0;
+        z-index: -1;
+        transform: rotateY(-180deg);
+    }
+
+    @include res(lg) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+.wrap-grid-box {
+    display: grid;
+    gap: 30px;
+}
+
+.wrap-grid-box.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.box-icon-item .wrap-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.box-icon-item .wrap-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgba(36, 39, 78, 1);
+    position: relative;
+    -webkit-transition: all 0.8s ease;
+    -moz-transition: all 0.8s ease;
+    -ms-transition: all 0.8s ease;
+    -o-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+}
+
+.box-icon-item .wrap-icon::before {
+    position: absolute;
+    content: "";
+    inset: 0 0;
+    z-index: 1;
+    background: linear-gradient(
+        90deg,
+        #fdb79e 0%,
+        #fdd1b1 25%,
+        #feeacd 50%,
+        #fdd1b1 75%,
+        #fdb79e 100%
+    );
+    background-size: 100% 100% !important;
+    border-radius: 50%;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.box-icon-item:hover .wrap-icon::before {
+    background-size: 200% 200% !important;
+}
+
+.box-icon-item .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 98px;
+    height: 98px;
+    border-radius: 50%;
+    background: linear-gradient(
+        90deg,
+        #fdb79e 0%,
+        #fdd1b1 25%,
+        #feeacd 50%,
+        #fdd1b1 75%,
+        #fdb79e 100%
+    );
+    background-size: 200% 100%;
+    background-position: 200% 0;
+    animation: bgMoveSmooth 3s linear infinite;
+    margin: 1px;
+    position: relative;
+    z-index: 5;
+}
+
+.box-icon-item p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.section-addition {
+    .heading-section {
+        margin-bottom: 42px;
+    }
+
+    .heading {
+        margin-bottom: 16px;
+    }
+
+    .tf-grid-layout {
+        @include res(md) {
+            gap: 24px 15px;
+        }
     }
 }
